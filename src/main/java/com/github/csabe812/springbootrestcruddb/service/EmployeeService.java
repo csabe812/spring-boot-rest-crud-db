@@ -18,4 +18,8 @@ public class EmployeeService {
 		return employeeRepository.findAll();
 	}
 
+	public Employee createEmployee(Employee employee) {
+		return employeeRepository.save(employee);
+	}
+
 }
