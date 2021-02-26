@@ -3,7 +3,7 @@ package com.github.csabe812.springbootrestcruddb.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -43,6 +43,13 @@ public class EmployeeController {
 	@PostMapping("/employee")
 	public Employee createEmployee(@RequestBody Employee employee) {
 		return employeeService.saveEmployee(employee);
+	}
+
+	@DeleteMapping("/employee/{id}")
+	public String deleteEmployee(@PathVariable(value = "id") Long employeeId) {
+		Employee employeeToBeDeleted = employeeService.findById(employeeId);
+		employeeService.delete(employeeToBeDeleted);
+		return "DELETED";
 	}
 
 }

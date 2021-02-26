@@ -26,4 +26,8 @@ public class EmployeeService {
 		return employeeRepository.findById(employeeId).orElse(new Employee(0, "Not exists", 0));
 	}
 
+	public void delete(Employee employeeToBeDeleted) {
+		employeeRepository.delete(employeeToBeDeleted);
+	}
+
 }
