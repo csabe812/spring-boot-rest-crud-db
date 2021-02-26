@@ -21,6 +21,13 @@ public class Employee {
 	public Employee() {
 	}
 
+	public Employee(long id, String name, int salary) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.salary = salary;
+	}
+	
 	public long getId() {
 		return id;
 	}

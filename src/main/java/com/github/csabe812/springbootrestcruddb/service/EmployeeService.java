@@ -22,4 +22,8 @@ public class EmployeeService {
 		return employeeRepository.save(employee);
 	}
 
+	public Employee findById(Long employeeId) {
+		return employeeRepository.findById(employeeId).orElse(new Employee(0, "Not exists", 0));
+	}
+
 }
