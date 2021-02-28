@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.github.csabe812.springbootrestcruddb.domain.Employee;
-import com.github.csabe812.springbootrestcruddb.repositry.EmployeeRepository;
+import com.github.csabe812.springbootrestcruddb.repository.EmployeeRepository;
 
 @Service
 public class EmployeeService {

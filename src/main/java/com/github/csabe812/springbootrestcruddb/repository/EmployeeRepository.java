@@ -1,4 +1,4 @@
-package com.github.csabe812.springbootrestcruddb.repositry;
+package com.github.csabe812.springbootrestcruddb.repository;
 
 import java.util.List;
 import org.springframework.data.repository.CrudRepository;
