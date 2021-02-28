@@ -10,5 +10,7 @@ import com.github.csabe812.springbootrestcruddb.domain.Employee;
 public interface EmployeeRepository extends CrudRepository<Employee, Long> {
 
 	List<Employee> findAll();
+	
+	Employee findByName(String name);
 
 }
